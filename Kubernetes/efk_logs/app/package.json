@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "docker": "docker build -t lb-multiline-logs . && docker run -dp 8080:8080 lb-multiline-logs"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.17.1",
+    "express-request-id": "1.4.1",
+    "luxon": "2.0.1"
+  }
+}
