@@ -8,7 +8,7 @@ spec:
     name: nginx
     volumeMounts:
     - name: secrets-store-inline
-      mountPath: "/mnt/secrets-store"
+      mountPath: /mnt/secrets-store
       readOnly: true
   volumes:
     - name: secrets-store-inline
@@ -16,4 +16,4 @@ spec:
         driver: secrets-store.csi.k8s.io
         readOnly: true
         volumeAttributes:
-          secretProviderClass: "azure-kvname"
+          secretProviderClass: azure-kvname
